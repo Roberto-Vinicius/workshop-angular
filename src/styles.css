@@ -6,6 +6,9 @@
 
 body {
     padding-bottom: 500px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .class {
