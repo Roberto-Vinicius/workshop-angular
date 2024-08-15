@@ -8,10 +8,10 @@ describe('IfRenderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IfRenderComponent]
+      declarations: [IfRenderComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(IfRenderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

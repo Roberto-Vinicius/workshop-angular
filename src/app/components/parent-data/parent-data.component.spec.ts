@@ -8,10 +8,10 @@ describe('ParentDataComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ParentDataComponent]
+      declarations: [ParentDataComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(ParentDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
