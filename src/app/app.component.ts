@@ -7,11 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  userName = 'JAO';
-  userData = {
-    email: 'roberto@123',
-    role: 'admin',
-  }
-
   title = 'workshop-front';
 }

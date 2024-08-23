@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Animal } from '../Animal';
+import { Usuarios } from '../Usuarios';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ListService {
-  static remove(animals: Animal[], animal: Animal) {
+  static remove(users: Usuarios[], usuario: Usuarios) {
     throw new Error('Method not implemented.');
   }
 
@@ -18,11 +18,11 @@ export class ListService {
 
   constructor(private http: HttpClient) { }
 
-  remove(animals: Animal[], animal: Animal) {
-    return animals.filter((a) => animal.name !== a.name);
+  remove(users: Usuarios[], usuarios: Usuarios) {
+    return users.filter((u) => usuarios.name !== u.name);
   }
-  
-  getAll(): Observable<Animal[]> {
-    return this.http.get<Animal[]>(this.apiUrl)
+
+  getAll(): Observable<Usuarios[]> {
+    return this.http.get<Usuarios[]>(this.apiUrl)
   }
 }

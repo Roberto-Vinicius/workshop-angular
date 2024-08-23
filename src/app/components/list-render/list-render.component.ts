@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Animal } from '../../Animal';
+import { Usuarios } from '../../Usuarios';
 
 import { ListService } from '../../services/list.service';
 
@@ -10,24 +10,25 @@ import { ListService } from '../../services/list.service';
   styleUrls: ['./list-render.component.css'],
 })
 export class ListRenderComponent {
-  
-  animals: Animal[] = [ ];
 
-  animalDetails = '';
+  users: Usuarios[] = [];
 
-  constructor(private listService: ListService ) {
-    this.getAnimals();
+  detalhesUsuarios = '';
+
+  constructor(private listService: ListService) {
+    this.getUsers();
   }
 
-  showAge(animal: Animal) {
-    this.animalDetails = `O pet ${animal.name} tem ${animal.age} anos!`
+  showPhone(usuario: Usuarios) {
+    this.detalhesUsuarios = `Usuario: ${usuario.name} telefone: ${usuario.phone}`;
+    console.log(usuario)
   }
 
-  removeAnimal(animal: Animal) {
-    this.animals = this.listService.remove(this.animals, animal);
+  removerUsuario(usuario: Usuarios) {
+    this.users = this.listService.remove(this.users, usuario);
   }
 
-  getAnimals(): void {
-    this.listService.getAll().subscribe((animals) => (this.animals = animals));
+  getUsers(): void {
+    this.listService.getAll().subscribe((users) => (this.users = users));
   }
 }

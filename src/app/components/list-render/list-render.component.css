@@ -1,0 +1,69 @@
+/* container geral */
+.listaUsuarios {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* título principal */
+  h2 {
+    color: #333;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  /* lista de itens */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  /* estilizando o texto dos itens */
+  li span {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* botões */
+  button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* estilizando o detalhe do usuário */
+  h3 {
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
