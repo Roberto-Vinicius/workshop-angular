@@ -1,0 +1,16 @@
+<div>
+  <h2>Produtos</h2>
+  <ul class="lista-produtos">
+    <li *ngFor="let produto of products" class="produto-item">
+      <span><strong>Nome:</strong> {{ produto.name }}</span>
+      <span><strong>Preço:</strong> {{ produto.price | currency }}</span>
+      <div class="botoes">
+        <button (click)="mostrarDetalhes(produto)">Dados do Produto</button>
+      </div>
+    </li>
+  </ul>
+  <div *ngIf="detalhesProduto" class="detalhes-produto">
+    <h3>Detalhes do Produto</h3>
+    <pre>{{ detalhesProduto }}</pre> <!-- Remover o pipe `json` -->
+  </div>
+</div>

@@ -60,10 +60,25 @@
   }
   
   /* estilizando o detalhe do usuário */
-  h3 {
-    color: #333;
-    font-size: 16px;
-    text-align: center;
+  .detalhes-usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinha os filhos em coluna */
     margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .detalhes-usuario h3 {
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+  }
+  
+  .detalhes-usuario pre {
+    white-space: pre-wrap; /* Preserva quebras de linha */
+    font-size: 14px;
+    margin: 0; /* Remove a margem padrão */
   }
   

@@ -9,6 +9,7 @@ import { ListService } from '../../services/list.service';
   templateUrl: './list-render.component.html',
   styleUrls: ['./list-render.component.css'],
 })
+
 export class ListRenderComponent {
 
   users: Usuarios[] = [];
@@ -19,9 +20,8 @@ export class ListRenderComponent {
     this.getUsers();
   }
 
-  showPhone(usuario: Usuarios) {
-    this.detalhesUsuarios = `Usuario: ${usuario.name} telefone: ${usuario.phone}`;
-    console.log(usuario)
+  showDados(usuario: Usuarios) {
+    this.detalhesUsuarios = `Usuário: ${usuario.name}\n` + `Email: ${usuario.email}\n` + `Telefone: ${usuario.phone}`;
   }
 
   removerUsuario(usuario: Usuarios) {

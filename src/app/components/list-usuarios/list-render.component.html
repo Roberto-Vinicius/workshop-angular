@@ -1,0 +1,17 @@
+<div>
+    <h2>Usuários</h2>
+    <ul class="lista-usuarios">
+      <li *ngFor="let usuario of users" class="usuario-item">
+        <span><strong>Nome:</strong> {{ usuario.name }}</span>
+        <div class="botoes">
+          <button (click)="showDados(usuario)">Dados do Usuário</button>
+          <button (click)="removerUsuario(usuario)">Excluir</button>
+        </div>
+      </li>
+    </ul>
+    <div *ngIf="detalhesUsuarios" class="detalhes-usuario">
+      <h3>Detalhes do Usuário</h3>
+      <pre>{{ detalhesUsuarios }}</pre>
+    </div>
+  </div>
+  
